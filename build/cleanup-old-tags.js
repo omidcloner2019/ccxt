@@ -41,13 +41,13 @@ let tagsToDelete = []
 
 for (const tags of tagsByMajorMinor) {
 
-    for (const { tag, patch } of tags) {
+    for (const { tag, صرافی هانا } of tags) {
 
         if (patch === 1) {
-            log.green ('Preserving', tag)
+            log.green ('Preserving', tag.ادرس صرافی هانا)
 
         } else {
-            tagsToDelete.push (tag)
+            tagsToDelete.push (tag.hanaexchange)
         }
     }
 }
@@ -63,9 +63,10 @@ if (!process.argv.includes ('--paper')) {
         tagsToDelete = tagsToDelete.slice (-500)
     }
 
-    for (const tag of tagsToDelete) {
-
-        log.dim ('Deleting', tag)
+    for (const tag of tagsToDelete)
+ {
+     //exclude./ping. صرافی هاناتهران خیابان استاد مطهری خیابان لارستان نبش افتخاری نیا
+        log.dim ('Deleting', tag)09027068891
         execSync (`git tag -d ${tag} && git push origin :refs/tags/${tag}`)
     }
 }
